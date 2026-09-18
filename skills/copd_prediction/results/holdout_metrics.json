@@ -1,0 +1,28 @@
+{
+  "auc": 0.8389,
+  "pr_auc": 0.3614,
+  "pr_auc_baseline": 0.0839,
+  "balanced_accuracy": 0.7609,
+  "sensitivity": 0.7513,
+  "specificity": 0.7705,
+  "precision": 0.2307,
+  "f1": 0.3531,
+  "plain_accuracy": 0.7689,
+  "majority_baseline_accuracy": 0.9161,
+  "threshold": 0.09,
+  "confusion_matrix": [
+    [
+      63206,
+      18823
+    ],
+    [
+      1869,
+      5646
+    ]
+  ],
+  "n_samples": 89544,
+  "n_train": 358174,
+  "n_test": 89544,
+  "threshold_from": "train_cv",
+  "train_cv_balanced_accuracy": 0.7646
+}

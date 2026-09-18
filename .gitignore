@@ -1,0 +1,33 @@
+# ── Python ──────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ── 数据策略：原始数据集 CSV 不提交 ─────────────────────────────────
+# 体积大（本仓库合计 约 69 MB），且校验和比直接提交文件更能证明
+# 「拿到的确实是同一份数据」。改由各 skill 的
+#   skills/<name>/scripts/fetch_data.py
+# 按 SHA256 校验下载；来源 URL、许可证与校验值记录在
+#   skills/<name>/data/DATA_PROVENANCE.md
+**/data/*.csv
+**/data/raw/
+*.zip
+
+# 已训练模型要提交 —— 保证不下载数据也能直接跑推理
+!models/*.json
+!models/*.ubj
+!models/*.joblib
+
+# ── 训练中间产物 ────────────────────────────────────────────────────
+*.pkl
+*.log
+
+# ── 编辑器 / 系统 ───────────────────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

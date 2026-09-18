@@ -1,0 +1,25 @@
+{
+  "roc_auc": {
+    "mean": 0.8234,
+    "std": 0.0113
+  },
+  "accuracy": {
+    "mean": 0.7597,
+    "std": 0.0106
+  },
+  "precision": {
+    "mean": 0.752,
+    "std": 0.0113
+  },
+  "recall": {
+    "mean": 0.8338,
+    "std": 0.0147
+  },
+  "f1": {
+    "mean": 0.7906,
+    "std": 0.0091
+  },
+  "n_splits": 5,
+  "n_repeats": 10,
+  "n_folds_total": 50
+}

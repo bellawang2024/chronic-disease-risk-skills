@@ -1,0 +1,181 @@
+{
+  "skill_name": "diabetes_prediction",
+  "version": "2.0",
+  "model_type": "xgboost.XGBClassifier",
+  "task": "binary_classification",
+  "trained_at": "2026-09-10T07:06:29+00:00",
+  "trained_on": "full_dataset",
+  "dataset": {
+    "name": "Pima Indians Diabetes Database",
+    "original_owner": "National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK)",
+    "distribution": "UCI Machine Learning Repository / OpenML dataset id 37",
+    "file": "data/pima_indians_diabetes.csv",
+    "sha256": "fa9f4490a5e0d9eb7a0a65e758388737ac74f3828d4c877acc6145abcbbb2997",
+    "n_samples": 768,
+    "n_features": 8,
+    "features": [
+      "preg",
+      "plas",
+      "pres",
+      "skin",
+      "insu",
+      "mass",
+      "pedi",
+      "age"
+    ],
+    "features_cn": {
+      "preg": "怀孕次数",
+      "plas": "口服糖耐量试验2小时血糖浓度",
+      "pres": "舒张压",
+      "skin": "三头肌皮褶厚度",
+      "insu": "2小时血清胰岛素",
+      "mass": "BMI体重指数",
+      "pedi": "糖尿病家族遗传函数",
+      "age": "年龄"
+    },
+    "feature_units": {
+      "preg": "次",
+      "plas": "mg/dL",
+      "pres": "mm Hg",
+      "skin": "mm",
+      "insu": "mu U/ml",
+      "mass": "kg/m^2",
+      "pedi": "-",
+      "age": "岁"
+    },
+    "target": "label",
+    "target_labels": {
+      "0": "无糖尿病",
+      "1": "糖尿病"
+    },
+    "positive_count": 268,
+    "population": ">=21 岁 Pima 印第安女性（数据集原始限制）"
+  },
+  "preprocessing": {
+    "zero_as_missing_columns": [
+      "plas",
+      "pres",
+      "skin",
+      "insu",
+      "mass"
+    ],
+    "imputer": "sklearn.impute.SimpleImputer(strategy='median')",
+    "imputer_statistics": {
+      "preg": 3.0,
+      "plas": 117.0,
+      "pres": 72.0,
+      "skin": 29.0,
+      "insu": 125.0,
+      "mass": 32.3,
+      "pedi": 0.3725,
+      "age": 29.0
+    },
+    "feature_order": [
+      "preg",
+      "plas",
+      "pres",
+      "skin",
+      "insu",
+      "mass",
+      "pedi",
+      "age"
+    ],
+    "scaling": "无（XGBoost 对特征尺度不敏感）"
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true,
+    "n_train": 614,
+    "n_test": 154
+  },
+  "cross_validation": {
+    "n_splits": 5,
+    "n_repeats": 10,
+    "random_state": 42
+  },
+  "hyperparameters": {
+    "n_estimators": 200,
+    "max_depth": 3,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "scale_pos_weight": 1,
+    "random_state": 42,
+    "eval_metric": "logloss",
+    "tree_method": "hist",
+    "n_jobs": -1
+  },
+  "decision_threshold": 0.5,
+  "validation": {
+    "holdout": {
+      "auc": 0.8257,
+      "accuracy": 0.7662,
+      "precision": 0.6957,
+      "recall": 0.5926,
+      "f1": 0.64,
+      "confusion_matrix": [
+        [
+          86,
+          14
+        ],
+        [
+          22,
+          32
+        ]
+      ],
+      "n_train": 614,
+      "n_test": 154,
+      "threshold": 0.5
+    },
+    "cross_validation": {
+      "roc_auc": {
+        "mean": 0.8379,
+        "std": 0.0264
+      },
+      "accuracy": {
+        "mean": 0.7629,
+        "std": 0.0253
+      },
+      "precision": {
+        "mean": 0.6798,
+        "std": 0.0474
+      },
+      "recall": {
+        "mean": 0.6099,
+        "std": 0.0565
+      },
+      "f1": {
+        "mean": 0.6415,
+        "std": 0.043
+      },
+      "n_splits": 5,
+      "n_repeats": 10,
+      "n_folds_total": 50
+    },
+    "acceptance_criteria": {
+      "holdout_accuracy": 0.75,
+      "holdout_auc": 0.8,
+      "cv_accuracy": 0.75,
+      "cv_auc": 0.8
+    },
+    "acceptance_passed": {
+      "holdout_accuracy": true,
+      "holdout_auc": true,
+      "cv_accuracy": true,
+      "cv_auc": true
+    }
+  },
+  "artifacts": {
+    "model_json": "diabetes_xgb_model.json",
+    "model_ubj": "diabetes_xgb_model.ubj",
+    "imputer": "imputer.joblib"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "xgboost": "3.2.0",
+    "scikit_learn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}

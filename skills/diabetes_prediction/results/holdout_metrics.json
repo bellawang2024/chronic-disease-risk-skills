@@ -1,0 +1,20 @@
+{
+  "auc": 0.8257,
+  "accuracy": 0.7662,
+  "precision": 0.6957,
+  "recall": 0.5926,
+  "f1": 0.64,
+  "confusion_matrix": [
+    [
+      86,
+      14
+    ],
+    [
+      22,
+      32
+    ]
+  ],
+  "n_train": 614,
+  "n_test": 154,
+  "threshold": 0.5
+}

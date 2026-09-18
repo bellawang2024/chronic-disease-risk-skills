@@ -1,0 +1,34 @@
+{
+  "auc": {
+    "mean": 0.7956,
+    "std": 0.002
+  },
+  "pr_auc": {
+    "mean": 0.6185,
+    "std": 0.0029
+  },
+  "balanced_accuracy": {
+    "mean": 0.7251,
+    "std": 0.0015
+  },
+  "sensitivity": {
+    "mean": 0.7514,
+    "std": 0.0073
+  },
+  "specificity": {
+    "mean": 0.6988,
+    "std": 0.0069
+  },
+  "f1": {
+    "mean": 0.6249,
+    "std": 0.0017
+  },
+  "threshold": {
+    "mean": 0.3193,
+    "std": 0.0048
+  },
+  "n_splits": 5,
+  "n_repeats": 3,
+  "n_folds_total": 15,
+  "note": "每折内部自行选择阈值，阈值信息未泄漏到验证折"
+}

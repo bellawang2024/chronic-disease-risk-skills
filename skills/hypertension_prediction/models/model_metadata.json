@@ -1,0 +1,214 @@
+{
+  "skill_name": "hypertension_prediction",
+  "version": "1.0",
+  "model_type": "xgboost.XGBClassifier",
+  "task": "binary_classification",
+  "trained_at": "2026-09-10T07:25:50+00:00",
+  "trained_on": "full_dataset",
+  "dataset": {
+    "name": "NHANES 2017-2018 (National Health and Nutrition Examination Survey)",
+    "owner": "U.S. Centers for Disease Control and Prevention (CDC), National Center for Health Statistics (NCHS)",
+    "survey_cycle": "2017-2018 (cycle J)",
+    "target_population": "美国非机构化平民人口（全人群抽样，不限性别、种族、地区）",
+    "cohort_definition": "成人(>=18 岁)且有有效血压测量",
+    "file": "data/hypertension_nhanes.csv",
+    "sha256": "e08ec328a3cd6cec11b8beee90352753cc3db887857944c14a591252e1b2be5f",
+    "n_samples": 5250,
+    "n_features": 14,
+    "features": [
+      "age",
+      "bmi",
+      "waist_cm",
+      "height_cm",
+      "education",
+      "income_pir",
+      "smoker",
+      "diabetes",
+      "pulse",
+      "hba1c",
+      "cholesterol",
+      "hdl",
+      "creatinine",
+      "uric_acid"
+    ],
+    "features_cn": {
+      "age": "年龄",
+      "sex_male": "性别(1=男,0=女)",
+      "bmi": "BMI体重指数",
+      "waist_cm": "腰围",
+      "height_cm": "身高",
+      "race": "种族/族裔(1=墨西哥裔 2=其他西语裔 3=非西语裔白人 4=非西语裔黑人 6=非西语裔亚裔)",
+      "education": "教育程度(1=低于高中 2=高中 3=大专 4=本科 5=研究生)",
+      "income_pir": "家庭收入贫困比",
+      "smoker": "吸烟(一生≥100支)",
+      "diabetes": "糖尿病(自报,含临界)",
+      "pulse": "静息脉搏",
+      "hba1c": "糖化血红蛋白HbA1c",
+      "cholesterol": "总胆固醇",
+      "hdl": "高密度脂蛋白HDL",
+      "creatinine": "血清肌酐",
+      "uric_acid": "血清尿酸"
+    },
+    "feature_units": {
+      "age": "岁",
+      "sex_male": "1/0",
+      "bmi": "kg/m^2",
+      "waist_cm": "cm",
+      "height_cm": "cm",
+      "race": "编码",
+      "education": "编码",
+      "income_pir": "比值",
+      "smoker": "1/0",
+      "diabetes": "1/0",
+      "pulse": "次/分",
+      "hba1c": "%",
+      "cholesterol": "mg/dL",
+      "hdl": "mg/dL",
+      "creatinine": "mg/dL",
+      "uric_acid": "mg/dL"
+    },
+    "sensitive_features_included": false,
+    "target": "label",
+    "target_definition": "ACC/AHA 2017: 平均 SBP>=130 或 平均 DBP>=80 或 正在服用降压药 (BPQ050A=1)",
+    "target_labels": {
+      "0": "无高血压",
+      "1": "高血压"
+    },
+    "positive_count": 2857,
+    "prevalence": 0.5442,
+    "n_male": 2549,
+    "n_female": 2701
+  },
+  "preprocessing": {
+    "imputer": "sklearn.impute.SimpleImputer(strategy='median')",
+    "imputer_statistics": {
+      "age": 51.0,
+      "bmi": 28.4,
+      "waist_cm": 98.9,
+      "height_cm": 166.0,
+      "education": 4.0,
+      "income_pir": 2.11,
+      "smoker": 0.0,
+      "diabetes": 0.0,
+      "pulse": 70.0,
+      "hba1c": 5.6,
+      "cholesterol": 183.0,
+      "hdl": 51.0,
+      "creatinine": 0.84,
+      "uric_acid": 5.3
+    },
+    "feature_order": [
+      "age",
+      "bmi",
+      "waist_cm",
+      "height_cm",
+      "education",
+      "income_pir",
+      "smoker",
+      "diabetes",
+      "pulse",
+      "hba1c",
+      "cholesterol",
+      "hdl",
+      "creatinine",
+      "uric_acid"
+    ],
+    "scaling": "无（XGBoost 对特征尺度不敏感）"
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratify": true,
+    "n_train": 4200,
+    "n_test": 1050
+  },
+  "cross_validation": {
+    "n_splits": 5,
+    "n_repeats": 10,
+    "random_state": 42
+  },
+  "hyperparameters": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "learning_rate": 0.03,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1,
+    "random_state": 42,
+    "eval_metric": "logloss",
+    "tree_method": "hist",
+    "n_jobs": -1
+  },
+  "decision_threshold": 0.5,
+  "validation": {
+    "holdout": {
+      "auc": 0.8209,
+      "accuracy": 0.7562,
+      "precision": 0.7397,
+      "recall": 0.8511,
+      "f1": 0.7915,
+      "confusion_matrix": [
+        [
+          308,
+          171
+        ],
+        [
+          85,
+          486
+        ]
+      ],
+      "n_train": 4200,
+      "n_test": 1050,
+      "threshold": 0.5
+    },
+    "cross_validation": {
+      "roc_auc": {
+        "mean": 0.8234,
+        "std": 0.0113
+      },
+      "accuracy": {
+        "mean": 0.7597,
+        "std": 0.0106
+      },
+      "precision": {
+        "mean": 0.752,
+        "std": 0.0113
+      },
+      "recall": {
+        "mean": 0.8338,
+        "std": 0.0147
+      },
+      "f1": {
+        "mean": 0.7906,
+        "std": 0.0091
+      },
+      "n_splits": 5,
+      "n_repeats": 10,
+      "n_folds_total": 50
+    },
+    "acceptance_criteria": {
+      "holdout_accuracy": 0.75,
+      "holdout_auc": 0.8,
+      "cv_accuracy": 0.75,
+      "cv_auc": 0.8
+    },
+    "acceptance_passed": {
+      "holdout_accuracy": true,
+      "holdout_auc": true,
+      "cv_accuracy": true,
+      "cv_auc": true
+    }
+  },
+  "artifacts": {
+    "model_json": "hypertension_xgb_model.json",
+    "model_ubj": "hypertension_xgb_model.ubj",
+    "imputer": "imputer.joblib"
+  },
+  "environment": {
+    "python": "3.12.2",
+    "xgboost": "3.2.0",
+    "scikit_learn": "1.8.0",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  }
+}

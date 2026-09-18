@@ -1,0 +1,37 @@
+[
+  {
+    "feature":"hypertension",
+    "importance":0.5318999887,
+    "feature_cn":"高血压(医生告知)"
+  },
+  {
+    "feature":"age",
+    "importance":0.2468000054,
+    "feature_cn":"年龄"
+  },
+  {
+    "feature":"diabetes",
+    "importance":0.1824000031,
+    "feature_cn":"糖尿病(医生告知)"
+  },
+  {
+    "feature":"smoker",
+    "importance":0.0173000004,
+    "feature_cn":"吸烟状态(1=每天 2=偶尔 3=已戒 4=从不)"
+  },
+  {
+    "feature":"bmi",
+    "importance":0.0126999998,
+    "feature_cn":"BMI体重指数"
+  },
+  {
+    "feature":"height_cm",
+    "importance":0.0044999998,
+    "feature_cn":"身高"
+  },
+  {
+    "feature":"weight_kg",
+    "importance":0.0044,
+    "feature_cn":"体重"
+  }
+]
