@@ -18,7 +18,7 @@ import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent   # 仓库根目录
-REPO = ROOT.name                                        # 仓库名，如 chronic-disease-risk-models
+REPO = ROOT.name                                        # 仓库名，如 chronic-disease-risk-skills
 
 # ── skill 元信息（中文名与注记需人工维护；所有数字均自动读取）──────────────
 SKILL_META = {
@@ -87,9 +87,9 @@ SKILL_META = {
 }
 
 REPOS = {
-    "chronic-disease-risk-models": dict(
-        title="慢病预测模型",
-        en="Chronic Disease Risk Models",
+    "chronic-disease-risk-skills": dict(
+        title="慢病风险预测 Skills 技能包索引",
+        en="Chronic Disease Risk Prediction Skills",
         intro=(
             "本目录收录 7 个基于**美国全国性健康调查**构建的慢病风险预测模型。\n"
             "全部模型遵循同一套方法论约定，因此结果之间可以横向比较。"
@@ -101,9 +101,9 @@ REPOS = {
             "hyperlipidemia_prediction", "diabetes_prediction",
         ],
     ),
-    "cancer-risk-models": dict(
-        title="癌症预测模型",
-        en="Cancer Risk Models",
+    "cancer-risk-skills": dict(
+        title="癌症风险预测 Skills 技能包索引",
+        en="Cancer Risk Prediction Skills",
         intro=(
             "本目录收录 5 个癌症风险预测模型。与慢病仓库不同，这里的核心难点是"
             "**罕见结局 (rare outcome)** 的建模与评估。"
@@ -229,7 +229,7 @@ def build_readme(cfg: dict, rows: list[dict]) -> str:
     minprev = min(prevs) if prevs else None
 
     L = []
-    L.append(f"# {cfg['title']}索引 / {cfg['en']}\n")
+    L.append(f"# {cfg['title']} / {cfg['en']}\n")
     L.append(cfg["intro"] + "\n")
 
     if aucs and len(usable) == len(rows):

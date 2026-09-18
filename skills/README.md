@@ -1,4 +1,4 @@
-# 慢病预测模型索引 / Chronic Disease Risk Models
+# 慢病风险预测 Skills 技能包索引 / Chronic Disease Risk Prediction Skills
 
 本目录收录 7 个基于**美国全国性健康调查**构建的慢病风险预测模型。
 全部模型遵循同一套方法论约定，因此结果之间可以横向比较。

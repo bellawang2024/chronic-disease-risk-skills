@@ -127,7 +127,7 @@
 | **SEER** | ❌ 无危险因素 | 全变量字典检索确认**零**吸烟/饮酒/BMI/家族史；且**无健康对照** |
 | **BRFSS 做癌症** | ❌ 癌种不完整 | 直到 2022 年才加入 `CNCRTYP2`，且为**可选模块**，作答者仅 1.2–1.9 万人 |
 | **NHANES 做稀有结局** | ❌ 例数不足 | 胃癌在全 11 周期（1999–2023）合计仅 **59 例** |
-| **Kaggle 大数据集** | ⚠️ 逐个甄别 | 部分为**合成数据**。甄别方法见 [癌症 repo 的数据调研文档](https://github.com/bellawang2024/cancer-risk-models/blob/main/docs/DATA_AVAILABILITY.md) |
+| **Kaggle 大数据集** | ⚠️ 逐个甄别 | 部分为**合成数据**。甄别方法见 [癌症 repo 的数据调研文档](https://github.com/bellawang2024/cancer-risk-skills/blob/main/docs/DATA_AVAILABILITY.md) |
 
 ### 合成数据甄别清单
 

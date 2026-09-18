@@ -1,4 +1,4 @@
-# 全模型性能指标 / Model Performance
+# 全部 Skills 技能包性能指标 / Skill Package Performance
 
 > 本文件由 `models/model_metadata.json` **自动汇总生成**，未经手工转录。
 > 生成日期：2026-09-18

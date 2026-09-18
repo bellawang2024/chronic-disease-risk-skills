@@ -1,8 +1,8 @@
 <div align="center">
 
-# 慢病风险预测模型集
+# 慢病风险预测 Skills 技能包
 
-**7 个慢病风险预测模型 · 全部基于公开人群调查数据 · 从零可复现**
+**7 个可复现的 Agent Skills 技能包 · 全部基于公开人群调查数据 · 解压即可推理**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
@@ -17,7 +17,9 @@
 
 ## 这是什么
 
-一套**可直接运行**的慢病风险预测模型，覆盖 7 种常见慢性病。每个模型都以独立 skill 包形式提供：**解压即可推理，无需重新训练**；同时附完整训练脚本，可**逐字节复现**。
+本项目最终交付物是 **7 个 Agent Skills 技能包**，每个技能包对应一种常见慢性病。
+每个技能包**解压即可推理，无需重新训练**，同时附完整训练脚本，可**逐字节复现**。
+所有技能包都构建在**公开可获取的人群调查数据**之上（NHIS / BRFSS / NHANES），不依赖任何私有数据。
 
 > **不是论文复现，不是 demo。** 每个模型都附带：数据下载与 SHA256 校验脚本、训练脚本、推理脚本、完整的验证指标、以及一份写清所有局限的数据溯源文档。
 
@@ -61,8 +63,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/bellawang2024/chronic-disease-risk-models.git
-cd chronic-disease-risk-models
+git clone https://github.com/bellawang2024/chronic-disease-risk-skills.git
+cd chronic-disease-risk-skills
 pip install -r requirements.txt
 
 # 以糖尿病 v3 为例：直接用内置模型推理
@@ -283,7 +285,7 @@ v2 保留在 repo 中，**作为方法论演进的历史记录**，也作为"小
 ## 目录结构
 
 ```
-chronic-disease-risk-models/
+chronic-disease-risk-skills/
 ├── README.md                    # 本文件
 ├── README_EN.md                 # English
 ├── LICENSE
@@ -393,10 +395,10 @@ AUC 0.6394 与 0.7956。前者受限于数据（最强危险因素未采集）�
 
 ```bibtex
 @misc{chronic_disease_risk_models,
-  title  = {Chronic Disease Risk Models: Reproducible XGBoost Models on US National Survey Data},
+  title  = {Chronic Disease Risk Prediction Skills: Reproducible Agent Skills Packages on US National Survey Data},
   year   = {2025},
   note   = {NHIS 2016--2025, BRFSS 2017, NHANES 2017--2018},
-  url    = {https://github.com/bellawang2024/chronic-disease-risk-models}
+  url    = {https://github.com/bellawang2024/chronic-disease-risk-skills}
 }
 ```
 
@@ -432,6 +434,6 @@ AUC 0.6394 与 0.7956。前者受限于数据（最强危险因素未采集）�
 
 **如果这个项目对你有帮助，欢迎 Star ⭐**
 
-相关项目：[癌症风险预测模型集](https://github.com/bellawang2024/cancer-risk-models)
+相关项目：[癌症风险预测 Skills 技能包](https://github.com/bellawang2024/cancer-risk-skills)
 
 </div>

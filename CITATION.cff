@@ -1,11 +1,11 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Chronic Disease Risk Models: Reproducible XGBoost Models on US National Survey Data"
+title: "Chronic Disease Risk Prediction Skills: Reproducible Agent Skills Packages on US National Survey Data"
 type: software
 authors:
   - name: "bellawang2024"
     email: "wangweilu7120@163.com"
-repository-code: "https://github.com/bellawang2024/chronic-disease-risk-models"
+repository-code: "https://github.com/bellawang2024/chronic-disease-risk-skills"
 license: MIT
 keywords:
   - risk prediction
@@ -15,7 +15,8 @@ keywords:
   - epidemiology
   - reproducible research
 abstract: >-
-  Chronic Disease Risk Models built entirely on US government public-domain survey data.
+  Reproducible Agent Skills packages for chronic disease risk prediction, built entirely on
+  US government public-domain survey data.
   NHIS 2016-2025, BRFSS 2017, NHANES 2017-2018
   Every model is reproducible byte-for-byte from official raw files and
   ships with a full data provenance document covering checksums, variable

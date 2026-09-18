@@ -1,8 +1,8 @@
 <div align="center">
 
-# Chronic Disease Risk Models
+# Chronic Disease Risk Prediction Skills
 
-**7 chronic-disease risk models · Built entirely on public population-survey data · Reproducible byte-for-byte**
+**7 reproducible Agent Skills packages · Built entirely on public population-survey data · Ready to run out of the box**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
@@ -17,7 +17,9 @@
 
 ## What is this
 
-A set of **ready-to-run** risk-prediction models covering 7 common chronic diseases. Each model ships as a self-contained skill package: **unzip and predict — no retraining required** — and includes the full training pipeline so results can be **reproduced byte-for-byte**.
+The deliverable is **7 Agent Skills packages**, one per common chronic disease.
+Each is **ready to run out of the box — unzip and predict, no retraining required** — and ships with the full training pipeline so results can be **reproduced byte-for-byte**.
+Every package is built entirely on **publicly available population-survey data** (NHIS / BRFSS / NHANES), with no proprietary data involved.
 
 > **This is not a paper reproduction and not a demo.** Every model comes with a data download + SHA256 verification script, a training script, an inference script, complete validation metrics, and a provenance document that spells out every limitation.
 
@@ -61,8 +63,8 @@ With 10.88% prevalence, predicting "no diabetes" for everyone already yields **8
 ## Quick start
 
 ```bash
-git clone https://github.com/bellawang2024/chronic-disease-risk-models.git
-cd chronic-disease-risk-models
+git clone https://github.com/bellawang2024/chronic-disease-risk-skills.git
+cd chronic-disease-risk-skills
 pip install -r requirements.txt
 
 # Example: diabetes v3, using the bundled model
@@ -283,7 +285,7 @@ v2 is retained **as a historical record of the methodology** and as a contrast c
 ## Repository layout
 
 ```
-chronic-disease-risk-models/
+chronic-disease-risk-skills/
 ├── README.md                    # Chinese (primary)
 ├── README_EN.md                 # This file
 ├── LICENSE
@@ -391,10 +393,10 @@ AUC 0.6394 and 0.7956 respectively. The former is limited by the data (its stron
 
 ```bibtex
 @misc{chronic_disease_risk_models,
-  title  = {Chronic Disease Risk Models: Reproducible XGBoost Models on US National Survey Data},
+  title  = {Chronic Disease Risk Prediction Skills: Reproducible Agent Skills Packages on US National Survey Data},
   year   = {2025},
   note   = {NHIS 2016--2025, BRFSS 2017, NHANES 2017--2018},
-  url    = {https://github.com/bellawang2024/chronic-disease-risk-models}
+  url    = {https://github.com/bellawang2024/chronic-disease-risk-skills}
 }
 ```
 
@@ -430,6 +432,6 @@ AUC 0.6394 and 0.7956 respectively. The former is limited by the data (its stron
 
 **If this project helps you, please consider giving it a Star ⭐**
 
-Related: [Cancer Risk Models](https://github.com/bellawang2024/cancer-risk-models)
+Related: [Cancer Risk Prediction Skills](https://github.com/bellawang2024/cancer-risk-skills)
 
 </div>
